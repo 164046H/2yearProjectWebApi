@@ -11,8 +11,8 @@ using System;
 namespace EMS.Data.Migrations
 {
     [DbContext(typeof(EMSContext))]
-    [Migration("20181020093429_addActiveAtributeToEmployee")]
-    partial class addActiveAtributeToEmployee
+    [Migration("20181110050142_add7")]
+    partial class add7
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -111,6 +111,8 @@ namespace EMS.Data.Migrations
 
                     b.Property<string>("PositionPId");
 
+                    b.Property<string>("RegisterCode");
+
                     b.Property<DateTime>("StartDate");
 
                     b.HasKey("EmpId");
@@ -120,6 +122,28 @@ namespace EMS.Data.Migrations
                     b.HasIndex("PositionId");
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("EMS.Data.Models.Event", b =>
+                {
+                    b.Property<string>("PKey")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Destination");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<string>("EventDescription");
+
+                    b.Property<string>("EventTitle");
+
+                    b.Property<DateTime>("StartDate");
+
+                    b.Property<string>("Url");
+
+                    b.HasKey("PKey");
+
+                    b.ToTable("Events");
                 });
 
             modelBuilder.Entity("EMS.Data.Models.Position", b =>

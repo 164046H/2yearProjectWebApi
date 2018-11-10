@@ -11,8 +11,8 @@ using System;
 namespace EMS.Data.Migrations
 {
     [DbContext(typeof(EMSContext))]
-    [Migration("20181021123835_addregistercode")]
-    partial class addregistercode
+    [Migration("20181108151544_add5")]
+    partial class add5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

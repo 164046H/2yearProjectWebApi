@@ -11,8 +11,8 @@ using System;
 namespace EMS.Data.Migrations
 {
     [DbContext(typeof(EMSContext))]
-    [Migration("20181014075803_addTables")]
-    partial class addTables
+    [Migration("20181109154112_add6")]
+    partial class add6
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -105,9 +105,15 @@ namespace EMS.Data.Migrations
 
                     b.Property<string>("EmpPassword");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<string>("PositionId");
 
                     b.Property<string>("PositionPId");
+
+                    b.Property<string>("RegisterCode");
+
+                    b.Property<DateTime>("StartDate");
 
                     b.HasKey("EmpId");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EMS.Data.Migrations
 {
-    public partial class addTables : Migration
+    public partial class add5 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -192,8 +192,11 @@ namespace EMS.Data.Migrations
                     EmpGender = table.Column<string>(nullable: true),
                     EmpName = table.Column<string>(nullable: true),
                     EmpPassword = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false),
                     PositionId = table.Column<string>(nullable: true),
-                    PositionPId = table.Column<string>(nullable: true)
+                    PositionPId = table.Column<string>(nullable: true),
+                    RegisterCode = table.Column<string>(nullable: true),
+                    StartDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

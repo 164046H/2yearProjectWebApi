@@ -123,6 +123,28 @@ namespace EMS.Data.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("EMS.Data.Models.Event", b =>
+                {
+                    b.Property<string>("PKey")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Destination");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<string>("EventDescription");
+
+                    b.Property<string>("EventTitle");
+
+                    b.Property<DateTime>("StartDate");
+
+                    b.Property<string>("Url");
+
+                    b.HasKey("PKey");
+
+                    b.ToTable("Events");
+                });
+
             modelBuilder.Entity("EMS.Data.Models.Position", b =>
                 {
                     b.Property<string>("PositionId")

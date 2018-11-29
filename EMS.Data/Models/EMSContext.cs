@@ -19,10 +19,12 @@ namespace EMS.Data.Models
 
         }
        
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Event { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Event> Events { get; set; }
+        public DbSet<OneDayTripRegistrant> OneDayTripRegistrants { get; set; }
+        public DbSet<TwoDayTripRegistrants> TwoDayTripRegistrant { get; set; }
 
     }
 }
